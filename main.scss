@@ -181,6 +181,8 @@ li {
     ol {
         display: flex;
         flex-direction: row;
+        height: auto;
+        margin: 50px 0;
         justify-content: space-around;
     }
     li {
@@ -199,15 +201,22 @@ li {
 
 .restaurants {
     background-color: $lightgrey;
-    height: 600px;
-    @include column()
+    height: 1200px;
+    @include column;
+    justify-content: space-around;
+    padding-bottom: 2%;
     & h2 {
         font-size: 18px;
         margin-left: 5%;
-        padding-top: 5%;
+        padding-top: 2%;
     }
 }
-
+.cards__all{
+    width: 100%;
+    height: 1100px;
+    @include column;
+    justify-content: space-around;
+}
 .cards {
     width: 90%;
     max-width: 400px;
@@ -258,6 +267,57 @@ li {
     color: black;
 }
 
+@media screen and (min-width: 769px){
+    .restaurants {
+        display: flex;
+        height: 650px;
+        h2 {
+            height: 100px;
+            width: 100%;
+        }
+        .cards__all {
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .cards {
+                margin: 20px;
+            }
+        }
+    }
+}
+
+/*FOOTER*/
+
+.footer {
+    background-color: darken($color: $grey, $amount: 30%);
+    height: 180px;
+    padding: 4%;
+    &__title {
+        font-family:'Shrikhand', cursive;
+        color: $white;
+        font-size: 18px;
+        padding: 10px 1px 10px 1px;
+    }
+    &__link {
+        text-decoration: none;
+        color: $white;
+        padding: 5px;
+    }
+    &__link a {
+        color: $white;
+    }
+    @media screen and (min-width: 769px){
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 60px;
+    }    
+
+}
+
+.footer--padding {
+    padding-right: 7px;
+}
 
 
 
