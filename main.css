@@ -101,7 +101,7 @@ a {
   text-decoration: none;
   color: #fff;
   border-radius: 20px;
-  width: 40%;
+  width: 200px;
   margin-bottom: 50px;
   border: none;
 }
@@ -112,9 +112,8 @@ a {
         -ms-flex-align: center;
             align-items: center;
   }
-  .info a {
-    width: 100%;
-    max-width: 200px;
+  .btn {
+    width: 200px;
   }
 }
 
@@ -329,8 +328,8 @@ li:hover .padding {
 /*FOOTER*/
 .footer {
   background-color: #343434;
-  height: 180px;
-  padding: 4%;
+  height: 200px;
+  padding-top: 20px;
   position: absolute;
   width: 100%;
 }
@@ -339,13 +338,13 @@ li:hover .padding {
   font-family: 'Shrikhand', cursive;
   color: #fff;
   font-size: 18px;
-  padding: 10px 1px 10px 1px;
+  padding: 10px 1px 10px 20px;
 }
 
 .footer__link {
   text-decoration: none;
   color: #fff;
-  padding: 5px;
+  padding: 5px 1px 5px 20px;
 }
 
 .footer__link a {
@@ -362,7 +361,7 @@ li:hover .padding {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 60px;
+    height: 140px;
   }
 }
 
@@ -387,10 +386,10 @@ li:hover .padding {
   position: relative;
   top: 200px;
   background-color: #f3f3f3;
-  height: 1450px;
+  height: auto;
   border-radius: 30px 30px 0 0;
   padding: 20px;
-  text-align: center;
+  padding-bottom: 120px;
 }
 
 .meal h2 {
@@ -407,6 +406,18 @@ li:hover .padding {
           align-items: center;
 }
 
+@media screen and (min-width: 769px) {
+  .meal {
+    top: 260px;
+    height: auto;
+    margin-bottom: 120px;
+  }
+  .meal h2 {
+    font-size: 28px;
+    width: 30%;
+  }
+}
+
 .meal__sdd {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -418,8 +429,8 @@ li:hover .padding {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 400px;
-  justify-content: space-around;
+  gap: 20px;
+  height: auto;
   margin-bottom: 30px;
 }
 
@@ -431,13 +442,28 @@ li:hover .padding {
   border-bottom: 3px solid #99E2D0;
 }
 
+@media screen and (min-width: 769px) {
+  .meal__sdd {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 100px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    overflow: scroll;
+  }
+}
+
 .meal__cards {
   background-color: #fff;
   border-radius: 20px;
   -webkit-box-shadow: 3px 1px 6px grey;
           box-shadow: 3px 1px 6px grey;
   padding: 5px 20px 5px 10px;
-  overflow: hidden;
 }
 
 .meal__cards h4 {
@@ -459,5 +485,18 @@ li:hover .padding {
 .meal__cards p .meal__cards--price {
   font-weight: bold;
   padding-right: 20px;
+}
+
+@media screen and (min-width: 769px) {
+  .meal__cards {
+    width: 300px;
+    height: 80px;
+  }
+}
+
+.btn--center {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 50px;
 }
 /*# sourceMappingURL=main.css.map */
