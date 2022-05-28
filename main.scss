@@ -162,7 +162,10 @@ a {
     width: 200px;
     margin-bottom: 50px;
     border: none;
-    
+    &:hover {
+        background: linear-gradient(100deg, $secondary, $primary);
+        box-shadow: 5px 5px 5px grey;
+    }
     
 }
 
