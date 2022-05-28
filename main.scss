@@ -30,18 +30,6 @@ $white: #fff;
     
 }
 
-//keyframes//
-
-@keyframes slideLeft {
-    from {
-        transform: translateX(-200px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
 
 /*GENERAL*/
 
@@ -52,7 +40,6 @@ body{
     box-sizing: border-box;
     max-width: 1440px;
 }
-
 a {
     text-decoration: none;
 }
@@ -60,8 +47,52 @@ a {
 .small {
     font-size: 14px;
 }
+// loader 
 
+.loading {
+    position: fixed;
+    background-color: $white;
+    height: 100%;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.9;
+    animation: charge 2s ease-in-out forwards 3s;
+    .loader {
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        border: 8px solid $lightgrey;
+        opacity: 0.9;
+        width: 60px;
+        height: 60px;
+        border-top-color: $primary;
+        border-bottom-color: $secondary;
+        border-radius: 50%;
+        animation: chargeur 4s linear infinite;
+    }
+}
+@keyframes charge {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-9999px);
+    }
+    
+}
+@keyframes chargeur {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
 
+    
+}
 // HEADER//
 
 .header {
@@ -209,8 +240,9 @@ li {
     }
     li {
         width: 25%;
-        height: 50px;
-        text-align:center;          //mon texte est pas totalement centre
+        text-align:center;   
+        align-items: center;
+        justify-content: center;    //mon texte est pas totalement centre
         &:before {
             bottom: 40%;
         }
@@ -324,23 +356,6 @@ li {
 }
 
 
-
-
-/*.icone::before{
-    content: '';
-    top: 30px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg,$primary, $secondary );
-    border-radius: 50% 50% 0 0;
-    transition: all .5s;
-    z-index: 0;
-
-.icone:hover::before{
-    top: 0;
-}}*/
-
 @media screen and (min-width: 769px){
     .restaurants {
         display: flex;
@@ -440,7 +455,7 @@ li {
     gap: 20px;
     height: auto;
     margin-bottom: 30px;
-    animation: slideLeft 5s;
+    animation: slideLeft 5s backwards;
     h3{
         font-weight: 100;
         text-transform: uppercase;
@@ -453,8 +468,28 @@ li {
         height: 100px;
         align-items: center;
         flex-wrap:wrap;
-        overflow:scroll;
+        overflow:scroll;            //3 petits points? 
 
+    }
+}
+.starters { 
+    animation-delay: 0.5s;
+}
+.dishes {
+    animation-delay: 1.5s;          
+}
+.desserts {
+    animation-delay: 2.5s;
+}
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px);
+        
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 .meal__cards{
