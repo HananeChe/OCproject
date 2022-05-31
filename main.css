@@ -588,8 +588,7 @@ li:hover .padding {
   gap: 20px;
   height: auto;
   margin-bottom: 30px;
-  -webkit-animation: slideLeft 5s backwards;
-          animation: slideLeft 5s backwards;
+  /*animation: slideLeft 5s both;*/
 }
 
 .meal__sdd h3 {
@@ -658,6 +657,7 @@ li:hover .padding {
 }
 
 .meal__cards {
+  height: 100px;
   background-color: #fff;
   border-radius: 20px;
   -webkit-box-shadow: 3px 1px 6px grey;
@@ -684,6 +684,7 @@ li:hover .padding {
 .meal__cards p .meal__cards--price {
   font-weight: bold;
   padding-right: 20px;
+  margin-right: 0;
 }
 
 @media screen and (min-width: 769px) {
@@ -691,6 +692,86 @@ li:hover .padding {
     width: 300px;
     height: 80px;
   }
+}
+
+.meal__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: auto;
+  background-color: #fff;
+  border-radius: 20px;
+  -webkit-box-shadow: 3px 1px 6px grey;
+          box-shadow: 3px 1px 6px grey;
+  padding: 0px 20px 0px 10px;
+}
+
+.meal__cards h4 {
+  text-align: start;
+  margin-bottom: 0;
+}
+
+.meal__cards p {
+  margin-top: 10px;
+  font-weight: 100;
+}
+
+.meal__cards--name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.meal__cards--price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+.meal__cards--price .price {
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 15px;
+}
+
+.meal__cards--price .checked {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  margin-right: -120px;
+  background-color: #99E2D0;
+  width: 100px;
+  border-radius: 0 10px 10px 0;
+  color: #fff;
+  font-size: 30px;
+  opacity: 0;
+}
+
+.meal__cards--price:hover .checked {
+  margin-right: -20px;
+  opacity: 1;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .btn--center {
