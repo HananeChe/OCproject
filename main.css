@@ -321,7 +321,7 @@ li:hover .padding {
   padding-top: 2%;
 }
 
-.cards__all {
+.cards {
   width: 100%;
   height: 1100px;
   display: -webkit-box;
@@ -335,10 +335,10 @@ li:hover .padding {
       justify-content: space-around;
 }
 
-.cards {
+.card {
   width: 90%;
   max-width: 400px;
-  height: 230px;
+  height: auto;
   margin: 0px auto;
   background-color: #f3f3f3;
   -webkit-box-shadow: 0px 5px 20px grey;
@@ -347,7 +347,7 @@ li:hover .padding {
   position: relative;
 }
 
-.cards img {
+.card img {
   height: 150px;
   width: 100%;
   border-radius: 20px 20px 0px 0px;
@@ -355,7 +355,32 @@ li:hover .padding {
      object-fit: cover;
 }
 
-.cards__tag {
+.card__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+}
+
+.card__description h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.card__description p {
+  font-weight: 100;
+  margin: 0;
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card__img--tag {
   background-color: #99E2D0;
   color: #278870;
   padding: 7px 6px;
@@ -367,22 +392,7 @@ li:hover .padding {
   border-radius: 2px;
 }
 
-.cards h3 {
-  color: black;
-  font-size: 18px;
-  margin-left: 2%;
-  margin-bottom: 0;
-}
-
-.cards__substitle {
-  font-weight: 100;
-  margin-left: 2%;
-  margin-top: 0;
-  height: 5px;
-}
-
-.cards__icone {
-  height: 30px;
+.card__items--icone {
   width: 30px;
   font-size: 25px;
 }
@@ -466,7 +476,7 @@ li:hover .padding {
     height: 100px;
     width: 100%;
   }
-  .restaurants .cards__all {
+  .restaurants .cards {
     width: 80%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -476,13 +486,13 @@ li:hover .padding {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .restaurants .cards__all .cards {
+  .restaurants .cards .card {
     margin: 20px;
   }
 }
 
 /*FOOTER*/
-.footer {
+footer {
   background-color: #343434;
   height: 200px;
   padding-top: 20px;
@@ -490,25 +500,25 @@ li:hover .padding {
   width: 100%;
 }
 
-.footer__title {
+footer .footer__title {
   font-family: 'Shrikhand', cursive;
   color: #fff;
   font-size: 18px;
   padding: 10px 1px 10px 20px;
 }
 
-.footer__link {
+footer .footer__link {
   text-decoration: none;
   color: #fff;
   padding: 5px 1px 5px 20px;
 }
 
-.footer__link a {
+footer .footer__link a {
   color: #fff;
 }
 
 @media screen and (min-width: 769px) {
-  .footer {
+  footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -538,7 +548,7 @@ li:hover .padding {
      object-fit: cover;
 }
 
-.meal {
+.meals {
   position: relative;
   top: 200px;
   background-color: #f3f3f3;
@@ -548,7 +558,7 @@ li:hover .padding {
   padding-bottom: 120px;
 }
 
-.meal h2 {
+.meals h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -563,18 +573,18 @@ li:hover .padding {
 }
 
 @media screen and (min-width: 769px) {
-  .meal {
+  .meals {
     top: 260px;
     height: auto;
     margin-bottom: 120px;
   }
-  .meal h2 {
+  .meals h1 {
     font-size: 28px;
     width: 30%;
   }
 }
 
-.meal__sdd {
+.meal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -588,10 +598,9 @@ li:hover .padding {
   gap: 20px;
   height: auto;
   margin-bottom: 30px;
-  /*animation: slideLeft 5s both;*/
 }
 
-.meal__sdd h3 {
+.meal h2 {
   font-weight: 100;
   text-transform: uppercase;
   font-size: 18px;
@@ -600,18 +609,25 @@ li:hover .padding {
 }
 
 @media screen and (min-width: 769px) {
-  .meal__sdd {
+  .meal {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    height: 100px;
+    height: auto;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    overflow: scroll;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    gap: 40px;
+  }
+  .meal h2 {
+    width: 100px;
+    margin-right: 10px;
   }
 }
 
@@ -656,87 +672,44 @@ li:hover .padding {
   }
 }
 
-.meal__cards {
-  height: 100px;
-  background-color: #fff;
-  border-radius: 20px;
-  -webkit-box-shadow: 3px 1px 6px grey;
-          box-shadow: 3px 1px 6px grey;
-  padding: 5px 20px 5px 10px;
-}
-
-.meal__cards h4 {
-  text-align: start;
-  margin-bottom: 0;
-}
-
-.meal__cards p {
+.card--meal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 5px;
-  font-weight: 100;
+  overflow: hidden;
 }
 
-.meal__cards p .meal__cards--price {
-  font-weight: bold;
-  padding-right: 20px;
-  margin-right: 0;
+.card--meal:hover .card__items--checked {
+  margin-right: 0px;
+  margin-left: -26px;
+  opacity: 1;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.card--meal:hover .check {
+  -webkit-animation: rotate 1s;
+          animation: rotate 1s;
 }
 
 @media screen and (min-width: 769px) {
-  .meal__cards {
-    width: 300px;
-    height: 80px;
+  .card--meal {
+    width: auto;
+    height: auto;
   }
 }
 
-.meal__cards {
+.card__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: auto;
-  background-color: #fff;
-  border-radius: 20px;
-  -webkit-box-shadow: 3px 1px 6px grey;
-          box-shadow: 3px 1px 6px grey;
-  padding: 0px 20px 0px 10px;
+  gap: 40px;
 }
 
-.meal__cards h4 {
-  text-align: start;
-  margin-bottom: 0;
-}
-
-.meal__cards p {
-  margin-top: 10px;
-  font-weight: 100;
-}
-
-.meal__cards--name {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.meal__cards--price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 30px;
-}
-
-.meal__cards--price .price {
+.card__items--price {
   font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -747,7 +720,7 @@ li:hover .padding {
   padding-bottom: 15px;
 }
 
-.meal__cards--price .checked {
+.card__items--checked {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -758,25 +731,40 @@ li:hover .padding {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
-  margin-right: -120px;
+  margin-right: -80px;
   background-color: #99E2D0;
-  width: 100px;
+  width: 70px;
   border-radius: 0 10px 10px 0;
   color: #fff;
   font-size: 30px;
   opacity: 0;
 }
 
-.meal__cards--price:hover .checked {
-  margin-right: -20px;
-  opacity: 1;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
 }
 
 .btn--center {
   width: 100%;
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 /*# sourceMappingURL=main.css.map */

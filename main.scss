@@ -29,7 +29,52 @@ $white: #fff;
     justify-content: space-between;
     
 }
+@mixin card {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    margin: 0px auto;
+    background-color: $lightgrey;
+    box-shadow: 0px 5px 20px $grey;
+    border-radius: 20px;
+    position: relative;
+}
+@mixin description {
+    display:flex;
+    flex-direction: column;
+    padding: 20px;
+        h3{
+        font-size: 18px;
+        margin: 0;
+    }
+    p {
+        font-weight: 100;
+        margin: 0;
+        width: 250px;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
 
+@mixin tag {
+    background-color: $tertiary;
+    color: darken($tertiary, $amount: 40%);
+    padding: 7px 6px;
+    width: 70px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+    border-radius: 2px;
+} 
+
+@mixin img {
+    height: 150px;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+} 
 
 /*GENERAL*/
 
@@ -268,57 +313,29 @@ li {
         padding-top: 2%;
     }
 }
-.cards__all{
-    width: 100%;
+.cards {
+    width: 100%; 
     height: 1100px;
     @include column;
     justify-content: space-around;
 }
-.cards {
-    width: 90%;
-    max-width: 400px;
-    height: 230px;
-    margin: 0px auto;
-    background-color: $lightgrey;
-    box-shadow: 0px 5px 20px $grey;
-    border-radius: 20px;
-    position: relative;
+.card {
+    @include card;
     & img {
-        height: 150px;
-        width: 100%;
-        border-radius: 20px 20px 0px 0px;
-        object-fit: cover;
+        @include img;
     }
-    &__tag{
-        background-color: $tertiary;
-        color: darken($color: $tertiary, $amount: 40%);
-        padding: 7px 6px;
-        width: 70px;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        text-align: center;
-        border-radius: 2px;
+    &__description {
+        @include description;
     }
-    & h3{
-        color: black;
-        font-size: 18px;
-        margin-left: 2%;
-        margin-bottom: 0;
-    }
-    &__substitle {
-        font-weight: 100;
-        margin-left: 2%;
-        margin-top: 0;
-        height: 5px;
+}
+.card__img--tag {
+        @include tag;
+}
+.card__items--icone{
+    width: 30px;
+    font-size: 25px;
+}
 
-    }
-    &__icone {
-        height: 30px;
-        width: 30px;
-        font-size: 25px;
-        }
-    }
 
 .icone {
     position: absolute;
@@ -367,13 +384,12 @@ li {
             height: 100px;
             width: 100%;
         }
-        .cards__all {
+        .cards {
             width: 80%;
             flex-direction: row;
-
             margin: auto;
             flex-wrap: wrap;
-            .cards {
+            .card {
                 margin: 20px;
             }
         }
@@ -382,24 +398,24 @@ li {
 
 /*FOOTER*/
 
-.footer {
+ footer {
     background-color: darken($color: $grey, $amount: 30%);
     height: 200px;
     padding-top: 20px;
     position: absolute;
     width: 100%;
-    &__title {
+    .footer__title {
         font-family:'Shrikhand', cursive;
         color: $white;
         font-size: 18px;
         padding: 10px 1px 10px 20px;
     }
-    &__link {
+    .footer__link {
         text-decoration: none;
         color: $white;
         padding: 5px 1px 5px 20px;
     }
-    &__link a {
+    .footer__link a {
         color: $white;
     }
     @media screen and (min-width: 769px){
@@ -427,7 +443,7 @@ li {
 }
 
 
-.meal {
+.meals {
     position: relative;
     top: 200px;
     background-color: $lightgrey;
@@ -435,7 +451,7 @@ li {
     border-radius: 30px 30px 0 0;
     padding: 20px;
     padding-bottom: 120px;
-    h2 {
+    h1 {
         @include around;
         font-family: 'Shrikhand', cursive;
         font-size: 22px;
@@ -446,20 +462,20 @@ li {
         top: 260px;
         height: auto;
         margin-bottom: 120px;
-        h2 {
+        h1 {
             font-size: 28px;
             width: 30%
         }
     }
 
-}.meal__sdd{
+}.meal {
     @include column;
     @include around;
     gap: 20px;
     height: auto;
     margin-bottom: 30px;
-    /*animation: slideLeft 5s both;*/
-    h3{
+    //animation: slideLeft 5s both;
+    h2{
         font-weight: 100;
         text-transform: uppercase;
         font-size: 18px;
@@ -468,10 +484,15 @@ li {
     }
     @media screen and (min-width: 769px){
         flex-direction: row;
-        height: 100px;
+        height: auto;
         align-items: center;
         flex-wrap:wrap;
-        overflow:scroll;            //3 petits points? 
+        justify-content: start;
+        gap: 40px;
+        h2 {
+            width: 100px;
+            margin-right: 10px;
+        }
 
     }
 }
@@ -495,88 +516,57 @@ li {
         opacity: 1;
     }
 }
-.meal__cards{
-    height: 100px;
-    background-color: $white;
-    border-radius: 20px;
-    box-shadow: 3px 1px 6px $grey;
-    padding: 5px 20px 5px 10px;
-    & h4 {
-        text-align: start;
-        margin-bottom: 0;
+.card--meal{
+    @include between;
+    overflow: hidden;
+    &:hover .card__items--checked {
+        margin-right: 0px;
+        margin-left: -26px;
+        opacity: 1;
+        transition: all 0.5s linear;
     }
-    & p {
-        @include between;
-        margin-top: 5px;
-        font-weight: 100;
-        .meal__cards--price {
-            font-weight: bold;
-            padding-right: 20px;
-            margin-right: 0;
-        }
-
+    &:hover .check {
+        animation: rotate 1s;
     }
     @media screen and (min-width: 769px){
-        width: 300px;
-        height: 80px;
+        width: auto;
+        height: auto;
     }
 }
-
-.meal__cards{
-    @include between;
-    height: auto;
-    background-color: $white;
-    border-radius: 20px;
-    box-shadow: 3px 1px 6px $grey;
-    padding: 0px 20px 0px 10px;
-    & h4 {
-        text-align: start;
-        margin-bottom: 0;
-    }
-    & p {
-        margin-top: 10px;
-        font-weight: 100;
-    }
-}
-.meal__cards--name {
+.card__items {
     display: flex;
-    flex-direction: column;
-}
-.meal__cards--price {
-    display: flex;
-    gap: 30px;
-    //overflow: hidden;
-    
-    .price {
+    gap: 40px;
+    &--price {
         font-weight: bold;
         display: flex;
         align-items:flex-end;
         padding-bottom: 15px;
     }
-    .checked{
+      &--checked{
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
-        margin-right: -120px;
+        margin-right: -80px;
         background-color: $tertiary;
-        width: 100px;
+        width: 70px;
         border-radius: 0 10px 10px 0;
         color: $white;
         font-size: 30px;
         opacity: 0;
     }
-    &:hover .checked {
-        margin-right: -20px;
-        opacity: 1;
-        transition: all 1s;         //opacity 0 au debut 
+} 
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
     }
-
+    to {
+        transform: rotate(-360deg);
+    }
 }
-
  .btn--center {
      width: 100%;
      text-align: center;
-     padding-bottom: 50px;
+     padding-bottom: 40px;
     }
 
