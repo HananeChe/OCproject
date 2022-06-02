@@ -1,0 +1,17 @@
+// HEADER//
+
+.header {
+    @include center;
+    & img {
+        width: 140px;
+        height: 30px;
+        margin: 10px;
+    }
+    @media screen and (min-width: 769px){
+        & img {
+            width: 400px;
+            height: 50px;
+            margin: 20px;
+        }
+    }
+}

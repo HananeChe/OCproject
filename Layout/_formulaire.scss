@@ -1,0 +1,23 @@
+//Formumlaire//
+
+.location {
+    background-color: lighten($color: $grey, $amount: 40%);
+    padding: 10px;
+    box-shadow: $lightgrey;
+    @include center;
+    text-align: center;
+    &__position {
+        height: 100%;
+        width: 50%;
+        & input {
+            border: none;
+            background-color: lighten($color: $grey, $amount: 40%);
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    }
+    @media screen and (min-width: 769px){
+        text-align: center;
+        padding: 20px;
+    }
+}

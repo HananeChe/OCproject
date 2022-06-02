@@ -1,0 +1,24 @@
+//INFOS//
+
+.info {
+    @include column;
+    background-color: $lightgrey;
+    align-items: center;
+    text-align: center;
+}
+
+.info h2 {
+    margin-top: 30px;
+    font-size: 18px;
+}
+.info p {
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+
+@media screen and (min-width: 769px) {
+    .info {
+        align-items: center;
+    }
+}

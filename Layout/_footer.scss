@@ -1,0 +1,33 @@
+/*FOOTER*/
+
+footer {
+    background-color: darken($color: $grey, $amount: 30%);
+    height: 200px;
+    padding-top: 20px;
+    position: absolute;
+    width: 100%;
+    .footer__title {
+        font-family:'Shrikhand', cursive;
+        color: $white;
+        font-size: 18px;
+        padding: 10px 1px 10px 20px;
+    }
+    .footer__link {
+        text-decoration: none;
+        color: $white;
+        padding: 5px 1px 5px 20px;
+    }
+    .footer__link a {
+        color: $white;
+    }
+    @media screen and (min-width: 769px){
+        @include around;
+        align-items: center;
+        height: 140px;
+    }    
+
+}
+
+.footer--padding {
+    padding-right: 7px;
+}

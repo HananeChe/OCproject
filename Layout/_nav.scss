@@ -1,0 +1,74 @@
+//navigation//
+
+.fonctionnement h2 {
+    font-size: 18px;
+    margin-left: 5%;
+}
+.grey {
+    color: $grey;
+}
+
+.padding {
+    padding: 0px 20px 0px 20px;
+}
+
+
+.fonctionnement a {
+    text-decoration: none;
+    color: black;
+}
+
+ol {
+    @include column;
+    height: 300px;
+    justify-content: space-around;
+    counter-reset: step;
+}
+
+li {
+    width: 80%;
+    background-color: $lightgrey;
+    border-radius: 12px;
+    padding: 30px 20px 30px 20px;
+    box-shadow: 0px 10px 20px rgba(234, 230, 230, 0.9);
+    list-style-type: none;
+	counter-increment: step;
+    position: relative;
+    &:before {
+        content: counter(step); 
+        padding: 5px 10px;
+        vertical-align: top;
+        background: $primary;
+        border-radius: 50px;
+        font-size: 12px;
+        color: white;	
+        position: absolute;	
+        left: -10px;
+    }
+    &:hover {
+        background-color: rgba(147, 086, 220, 0.1);
+        transition: color .3s;
+    }
+    &:hover .padding {
+        color: $primary;
+    }
+}
+@media screen and (min-width: 769px) {
+    ol {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        margin: 50px 0;
+        justify-content: space-around;
+    }
+    li {
+        width: 25%;
+        text-align:center;   
+        align-items: center;
+        justify-content: center;    //mon texte est pas totalement centre
+        &:before {
+            bottom: 40%;
+        }
+    }
+
+}
