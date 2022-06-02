@@ -119,8 +119,9 @@ a {
     opacity: 0.9;
     animation: charge 2s ease-in-out forwards 3s;
     .loader {
-        margin: 50% auto;
-        //margin-top: 
+        margin: auto;
+        margin-top: 300px;
+        margin-bottom: 300px;
         border: 8px solid $lightgrey;
         opacity: 0.9;
         width: 60px;
@@ -129,10 +130,6 @@ a {
         border-bottom-color: $secondary;
         border-radius: 50%;
         animation: chargeur 4s linear infinite;
-        @media screen and (min-width: 769px){
-            margin-top: 300px;
-            margin-bottom: 300px;
-        }
     }
 }
 @keyframes charge {
@@ -478,7 +475,7 @@ li {
     background-color: $lightgrey;
     height: auto;
     border-radius: 30px 30px 0 0;
-    padding: 20px;
+    //padding: 20px;
     padding-bottom: 120px;
     h1 {
         @include around;
@@ -510,6 +507,7 @@ li {
         font-weight: 100;
         text-transform: uppercase;
         font-size: 18px;
+        margin-left: 20px;
         width: 40px;
         border-bottom: 3px solid $tertiary;
     }
@@ -553,14 +551,19 @@ li {
 .card--meal{
     @include between;
     overflow: hidden;
+    width: auto;
     &:hover .card__items--checked {
         margin-right: 0px;
-        margin-left: -26px;
+        margin-left: -40px;
         opacity: 1;
         transition: all 0.5s linear;
     }
     &:hover .check {
         animation: rotate 1s;
+    }
+    &:hover .card__items--price {
+        margin-left: -40px;
+        transition: all 0.5s linear;
     }
     @media screen and (min-width: 769px){
         max-width: 400px;
@@ -569,12 +572,12 @@ li {
 }
 .card__items {
     display: flex;
-    gap: 40px;
+    gap: 50px;
     &--price {
         font-weight: bold;
         display: flex;
         align-items:flex-end;
-        padding-bottom: 15px;
+        padding-bottom: 20px;
     }
       &--checked{
         display: flex;

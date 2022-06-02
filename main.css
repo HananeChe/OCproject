@@ -28,7 +28,9 @@ a {
 }
 
 .loading .loader {
-  margin: 50% auto;
+  margin: auto;
+  margin-top: 300px;
+  margin-bottom: 300px;
   border: 8px solid #f3f3f3;
   opacity: 0.9;
   width: 60px;
@@ -38,13 +40,6 @@ a {
   border-radius: 50%;
   -webkit-animation: chargeur 4s linear infinite;
           animation: chargeur 4s linear infinite;
-}
-
-@media screen and (min-width: 769px) {
-  .loading .loader {
-    margin-top: 300px;
-    margin-bottom: 300px;
-  }
 }
 
 @-webkit-keyframes charge {
@@ -594,7 +589,6 @@ footer .footer__link a {
   background-color: #f3f3f3;
   height: auto;
   border-radius: 30px 30px 0 0;
-  padding: 20px;
   padding-bottom: 120px;
 }
 
@@ -652,6 +646,7 @@ footer .footer__link a {
   font-weight: 100;
   text-transform: uppercase;
   font-size: 18px;
+  margin-left: 20px;
   width: 40px;
   border-bottom: 3px solid #99E2D0;
 }
@@ -733,11 +728,12 @@ footer .footer__link a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow: hidden;
+  width: auto;
 }
 
 .card--meal:hover .card__items--checked {
   margin-right: 0px;
-  margin-left: -26px;
+  margin-left: -40px;
   opacity: 1;
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
@@ -746,6 +742,12 @@ footer .footer__link a {
 .card--meal:hover .check {
   -webkit-animation: rotate 1s;
           animation: rotate 1s;
+}
+
+.card--meal:hover .card__items--price {
+  margin-left: -40px;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
 @media screen and (min-width: 769px) {
@@ -759,7 +761,7 @@ footer .footer__link a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 40px;
+  gap: 50px;
 }
 
 .card__items--price {
@@ -770,7 +772,7 @@ footer .footer__link a {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
 }
 
 .card__items--checked {
