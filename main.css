@@ -28,9 +28,7 @@ a {
 }
 
 .loading .loader {
-  margin: auto;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin: 50% auto;
   border: 8px solid #f3f3f3;
   opacity: 0.9;
   width: 60px;
@@ -40,6 +38,13 @@ a {
   border-radius: 50%;
   -webkit-animation: chargeur 4s linear infinite;
           animation: chargeur 4s linear infinite;
+}
+
+@media screen and (min-width: 769px) {
+  .loading .loader {
+    margin-top: 300px;
+    margin-bottom: 300px;
+  }
 }
 
 @-webkit-keyframes charge {
@@ -479,6 +484,28 @@ li:hover .padding {
 }
 
 @media screen and (min-width: 769px) {
+  .restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 1100px;
+  }
+  .cards {
+    width: 80%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .cards .card {
+    margin: 20px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
   .restaurants {
     display: -webkit-box;
     display: -ms-flexbox;
