@@ -22,15 +22,16 @@
         animation: chargeur 1.5s linear infinite;
     }
 }
+
 @keyframes charge {
     from {
         transform: translateX(0);
     }
     to {
         transform: translateX(-9999px);
-    }
-    
+    }  
 }
+
 @keyframes chargeur {
     0% {
         transform: rotate(0deg);
@@ -40,7 +41,5 @@
     }
     100% {
         transform: rotate(720deg);
-    }
-
-    
+    }   
 }

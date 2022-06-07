@@ -14,11 +14,13 @@
     display: flex;
     justify-content: space-around;
 }
+
 @mixin between {
     display: flex;
     justify-content: space-between;
     
 }
+
 @mixin btn {
     background: linear-gradient(0deg,$primary, $secondary );
     padding: 12px 20px 12px 20px;
@@ -35,6 +37,7 @@
         box-shadow: 5px 5px 5px grey;
     }
 }
+
 @mixin card {
     width: 90%;
     max-width: 400px;
@@ -45,12 +48,13 @@
     border-radius: 20px;
     position: relative;
 }
+
 @mixin description {
     display:flex;
     flex-direction: column;
     padding: 20px;
-        h3{
-        font-size: 18px;
+    h3 {
+        font-size: 17px;
         margin: 0;
     }
     p {

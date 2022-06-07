@@ -2,11 +2,11 @@
 @import "./utils/mixins";
 @import "./layout/loader";
 @import "./layout/header";
-@import "./layout/formulaire";
-@import "./layout/informations";
-@import "./layout/nav";
-@import "./layout/main-cards";
-@import "./layout/pages-cards";
+@import "./composants/formulaire";
+@import "./composants/informations";
+@import "./composants/nav";
+@import "./composants/main-cards";
+@import "./composants/pages-cards";
 @import "./layout/footer";
 @import "./composants/icone";
 @import "./Vendors/btn";
@@ -22,6 +22,7 @@ body{
     box-sizing: border-box;
     max-width: 1440px;
 }
+
 a {
     text-decoration: none;
 }

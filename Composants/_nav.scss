@@ -4,6 +4,7 @@
     font-size: 18px;
     margin-left: 5%;
 }
+
 .grey {
     color: $grey;
 }
@@ -53,6 +54,7 @@ li {
         color: $primary;
     }
 }
+
 @media screen and (min-width: 769px) {
     ol {
         display: flex;

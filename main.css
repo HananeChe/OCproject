@@ -115,7 +115,7 @@ header img {
 
 .location__position {
   height: 100%;
-  width: 50%;
+  width: auto;
 }
 
 .location__position input {
@@ -328,7 +328,7 @@ li:hover .padding {
 }
 
 .card__description h3 {
-  font-size: 18px;
+  font-size: 17px;
   margin: 0;
 }
 
@@ -348,7 +348,7 @@ li:hover .padding {
   }
 }
 
-.card__img--tag {
+.card__img__tag {
   background-color: #99E2D0;
   color: #278870;
   padding: 7px 6px;
@@ -360,7 +360,7 @@ li:hover .padding {
   border-radius: 2px;
 }
 
-.card__items--icone {
+.card__items__icone {
   width: 30px;
   font-size: 25px;
 }
@@ -468,8 +468,8 @@ li:hover .padding {
   gap: 20px;
   height: auto;
   margin-bottom: 30px;
-  -webkit-animation: slideLeft 5s both;
-          animation: slideLeft 5s both;
+  -webkit-animation: slideLeft 3s both;
+          animation: slideLeft 3s both;
 }
 
 .meal h2 {
@@ -515,13 +515,13 @@ li:hover .padding {
 }
 
 .dishes {
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .desserts {
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 @-webkit-keyframes slideLeft {
@@ -574,8 +574,9 @@ li:hover .padding {
           animation: rotate 1s;
 }
 
-.card--meal:hover .card__items--price {
+.card--meal:hover .card__items__price {
   margin-left: -40px;
+  padding-left: 20px;
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
@@ -594,7 +595,7 @@ li:hover .padding {
   gap: 50px;
 }
 
-.card__items--price {
+.card__items__price {
   font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
