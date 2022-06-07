@@ -3,7 +3,6 @@
 .location {
     background-color: lighten($color: $grey, $amount: 40%);
     padding: 10px;
-    box-shadow: $lightgrey;
     @include center;
     text-align: center;
     &__position {
