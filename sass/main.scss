@@ -1,16 +1,17 @@
 @import "./utils/variables";
 @import "./utils/mixins";
-@import "./layout/loader";
 @import "./layout/header";
-@import "./composants/formulaire";
-@import "./composants/informations";
-@import "./composants/nav";
-@import "./composants/main-cards";
-@import "./composants/pages-cards";
 @import "./layout/footer";
-@import "./composants/icone";
-@import "./Vendors/btn";
-@import "./vendors/bann";
+@import "./components/formulaire";
+@import "./components/informations";
+@import "./components/nav";
+@import "./components/main-cards";
+@import "./components/pages-cards";
+@import "./components/icone";
+@import "./components/btn";
+@import "./components/bann";
+@import "./components/loader";
+@import "./vendors/normalize.scss";
 
 
 /*GENERAL*/
