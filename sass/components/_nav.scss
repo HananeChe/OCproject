@@ -1,7 +1,8 @@
 //navigation//
 
 .fonctionnement h2 {
-    font-size: 18px;
+    margin-top: 50px;
+    font-size: 22px;
     margin-left: 5%;
 }
 
@@ -45,6 +46,9 @@ li {
         color: white;	
         position: absolute;	
         left: -10px;
+    }
+    a {
+        font-weight: 600;
     }
     &:hover {
         background-color: rgba(147, 086, 220, 0.1);
