@@ -9,7 +9,7 @@
 
 .info h2 {
     margin-top: 30px;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .info p {
@@ -21,5 +21,8 @@
 @media screen and (min-width: 769px) {
     .info {
         align-items: center;
+    }
+    .info h2 {
+        max-width: 600Px;
     }
 }
