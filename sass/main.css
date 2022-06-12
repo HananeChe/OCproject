@@ -9,7 +9,7 @@ header {
 
 header img {
   height: 30px;
-  margin: 10px;
+  margin: 20px 10px 5px 10px;
 }
 
 @media screen and (min-width: 769px) {
@@ -110,13 +110,17 @@ footer .footer__link a {
 }
 
 .info h2 {
-  margin-top: 30px;
+  margin-top: 40px;
   font-size: 22px;
+  max-width: 250px;
 }
 
 .info p {
+  font-size: 20px;
   font-weight: 100;
   margin-bottom: 20px;
+  margin-top: 5px;
+  max-width: 400px;
 }
 
 @media screen and (min-width: 769px) {
@@ -126,7 +130,7 @@ footer .footer__link a {
             align-items: center;
   }
   .info h2 {
-    max-width: 600Px;
+    max-width: 600px;
   }
 }
 
@@ -684,11 +688,11 @@ li:hover .padding {
 .btn {
   background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
   background: linear-gradient(0deg, #9356DC, #FF79DA);
-  padding: 12px 20px 12px 20px;
+  padding: 14px 20px 14px 20px;
   text-decoration: none;
   color: #fff;
   border-radius: 20px;
-  width: 200px;
+  width: 220px;
   margin-bottom: 50px;
   border: none;
   -webkit-box-shadow: 2px 2px 5px grey;
