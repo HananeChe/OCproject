@@ -23,8 +23,26 @@
             width: 90%
         }
     }
+.heart {
+    position: absolute;
+    right: 40px;
+    color: black;
+}
 
-}.meal {
+.background--heart {
+    color: transparent;
+    background: linear-gradient(0deg,$primary, $secondary );
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    &:hover {
+        opacity: 1;
+        animation: heartbeat .5s linear backwards ;
+    }
+}
+}
+
+.meal {
     @include column;
     @include around;
     gap: 20px;
@@ -91,21 +109,17 @@
         margin-left: -40px;
         opacity: 1;
         transition: all 0.5s linear;
-        //background-color: green;
     }
     &:hover .check {
         animation: rotate 1s;
     }
     &:hover .card__items__price {
         margin-left: -40px;
-        //margin-right: 80px;
         padding-left: 20px;
         transition: all 0.5s linear;
-        //background-color: yellow;
     }
     &:hover .card__items{
         margin-left: 40px;
-        //background-color: red;
     }
     @media screen and (min-width: 769px){
         max-width: 400px;
@@ -121,13 +135,11 @@
         display: flex;
         align-items:flex-end;
         padding-bottom: 15px;
-        //background-color: blue;
     }
       &--checked{
         display: flex;
         align-items: center;
         justify-content: center;
-        //height: 100%;
         margin-right: -80px;
         background-color: $tertiary;
         width: 70px;
@@ -148,7 +160,3 @@
     }
 }
 
-/*.price {
-    font-weight: 900;
-    margin-left: 50px;
-}*/

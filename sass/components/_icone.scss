@@ -10,12 +10,9 @@
     background: linear-gradient(0deg,$primary, $secondary );
     background-clip: text;
     -webkit-background-clip: text;
-    //margin-bottom: -10px;
     opacity: 0;
     &:hover {
         opacity: 1;
-        //margin-bottom: 0px;
-        //transition: all .5s ease-in-out;
         animation: heartbeat .5s linear backwards ;
     }
 }
