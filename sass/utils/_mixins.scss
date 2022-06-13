@@ -53,19 +53,23 @@
 @mixin description {
     display:flex;
     flex-direction: column;
-    padding: 10px 15px;
+    padding: 10px 0px 10px 15px;
     margin-bottom: 5px;
     h3 {
         font-size: 17px;
         margin: 0;
+        color: black;
     }
     p {
         font-weight: 100;
         margin: 0;
-        width: 250px;
+        width: auto;
+        max-width: 250px;
         white-space: nowrap; 
         overflow: hidden;
         text-overflow: ellipsis;
+        color: black;
+        //background-color: red;
     }
 }
 
