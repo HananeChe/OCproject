@@ -325,6 +325,7 @@ li:hover .padding {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: hidden;
   padding: 10px 0px 10px 15px;
   margin-bottom: 5px;
 }
@@ -339,7 +340,6 @@ li:hover .padding {
   font-weight: 100;
   margin: 0;
   width: auto;
-  max-width: 250px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -589,6 +589,10 @@ li:hover .padding {
   transition: all 0.5s linear;
 }
 
+.card--meal:hover .card__items {
+  margin-left: 40px;
+}
+
 @media screen and (min-width: 769px) {
   .card--meal {
     max-width: 400px;
@@ -624,7 +628,6 @@ li:hover .padding {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100%;
   margin-right: -80px;
   background-color: #99E2D0;
   width: 70px;
@@ -678,26 +681,14 @@ li:hover .padding {
 
 .background--icon:hover {
   opacity: 1;
-  -webkit-animation: heartbeat .5s ease-in-out backwards;
-          animation: heartbeat .5s ease-in-out backwards;
+  -webkit-animation: heartbeat .5s linear backwards;
+          animation: heartbeat .5s linear backwards;
 }
 
 @-webkit-keyframes heartbeat {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  40% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  50% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  90% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
     -webkit-transform: scale(1);
@@ -707,20 +698,8 @@ li:hover .padding {
 
 @keyframes heartbeat {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  40% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  50% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  90% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
     -webkit-transform: scale(1);
