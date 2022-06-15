@@ -477,8 +477,8 @@ li:hover .padding {
 
 .meals .background--heart:hover {
   opacity: 1;
-  -webkit-animation: heartbeat .5s linear backwards;
-          animation: heartbeat .5s linear backwards;
+  -webkit-animation: heartbeat .5s linear both;
+          animation: heartbeat .5s linear both;
 }
 
 .meal {

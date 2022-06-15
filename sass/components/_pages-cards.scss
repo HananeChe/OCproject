@@ -37,7 +37,7 @@
     opacity: 0;
     &:hover {
         opacity: 1;
-        animation: heartbeat .5s linear backwards ;
+        animation: heartbeat .5s linear both ;
     }
 }
 }
