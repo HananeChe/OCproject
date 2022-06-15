@@ -399,10 +399,6 @@ li:hover .padding {
     display: flex;
     height: 650px;
   }
-  .restaurants h2 {
-    height: 100px;
-    width: 100%;
-  }
   .restaurants .cards {
     width: 80%;
     -webkit-box-orient: horizontal;
