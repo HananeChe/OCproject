@@ -404,7 +404,7 @@ li:hover .padding {
     width: 100%;
   }
   .restaurants .cards {
-    width: 100%;
+    width: 80%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -585,8 +585,7 @@ li:hover .padding {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 350px;
-  max-width: 350px;
+  min-width: 350px;
   overflow: hidden;
 }
 

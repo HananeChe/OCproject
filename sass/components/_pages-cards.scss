@@ -101,8 +101,7 @@
 
 .card--meal{
     @include between;
-    width: 350px;
-    max-width: 350px;
+    min-width: 350px;
     overflow: hidden;
     &:hover .card__items--checked {
         margin-right: 0px;
